@@ -5,50 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portföyüm</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#anasayfa">Ana Sayfa</a></li>
-                <li><a href="#hakkimda">Hakkımda</a></li>
-                <li><a href="#projeler">Projeler</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header için yer tutucu -->
+    <div id="header-placeholder"></div>
 
     <main>
-        <section id="anasayfa">
-            <h1>Hoş Geldiniz</h1>
-            <p>Ben [İsminiz], web geliştirici</p>
-        </section>
-
-        <section id="hakkimda">
-            <h2>Hakkımda</h2>
-            <p>Buraya kendiniz hakkında bilgi ekleyin</p>
-        </section>
-
-        <section id="projeler">
-            <h2>Projelerim</h2>
-            <div class="proje-container">
-                <!-- Proje kartları buraya gelecek -->
+        <section id="anasayfa" class="hero-section">
+            <div class="hero-content">
+                <h1>Hoş Geldiniz</h1>
+                <p class="lead">Ben [İsminiz], Oyun Geliştirici</p>
+                <div class="cta-buttons">
+                    <a href="#projeler" class="btn btn-primary">Oyunlarımı Gör</a>
+                    <a href="#iletisim" class="btn btn-secondary">İletişime Geç</a>
+                </div>
             </div>
         </section>
 
-        <section id="iletisim">
+        <section id="hakkimda" class="about-section">
+            <h2>Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Tutkulu bir oyun geliştiricisi olarak, yaratıcı ve sürükleyici oyun deneyimleri tasarlıyorum. [Unity/Unreal Engine] ile geliştirdiğim projelerle kullanıcılara unutulmaz deneyimler yaşatmayı hedefliyorum.</p>
+                </div>
+                <div class="skills">
+                    <h3>Yeteneklerim</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Game Design</span>
+                        <span class="skill-tag">3D Modeling</span>
+                        <span class="skill-tag">Level Design</span>
+                        <span class="skill-tag">Blender</span>
+                        <span class="skill-tag">Version Control</span>
+                        <span class="skill-tag">Shader Programming</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projeler" class="projects-section">
+            <h2>Oyunlarım</h2>
+            <div class="proje-container">
+                <div class="proje-card">
+                    <img src="oyun1.jpg" alt="Oyun 1">
+                    <h3>Oyun Adı</h3>
+                    <p>Oyun açıklaması ve kullanılan teknolojiler</p>
+                    <div class="proje-links">
+                        <a href="#" class="btn">Steam</a>
+                        <a href="#" class="btn">Itch.io</a>
+                    </div>
+                </div>
+                <!-- Daha fazla oyun kartı eklenebilir -->
+            </div>
+        </section>
+
+        <section id="iletisim" class="contact-section">
             <h2>İletişim</h2>
-            <form>
-                <input type="text" placeholder="İsim">
-                <input type="email" placeholder="E-posta">
-                <textarea placeholder="Mesajınız"></textarea>
-                <button type="submit">Gönder</button>
-            </form>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>İletişim Bilgileri</h3>
+                    <p><i class="fas fa-envelope"></i> email@adresiniz.com</p>
+                    <p><i class="fas fa-phone"></i> +90 XXX XXX XX XX</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="İsim" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-posta" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mesajınız" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gönder</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 - Tüm hakları saklıdır</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>İletişim</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> email@adresiniz.com</li>
+                    <li><i class="fas fa-phone"></i> +90 XXX XXX XX XX</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Şehir, Ülke</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Platformlar</h4>
+                <ul>
+                    <li><a href="#">Steam</a></li>
+                    <li><a href="#">Itch.io</a></li>
+                    <li><a href="#">Google Play</a></li>
+                    <li><a href="#">App Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Sosyal Medya</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tüm hakları saklıdır.</p>
+        </div>
     </footer>
 
     <script src="scripts/main.js"></script>
