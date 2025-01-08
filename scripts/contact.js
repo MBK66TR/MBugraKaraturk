@@ -1,24 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
     
-    contactForm?.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Form verilerini al
-        const formData = new FormData(contactForm);
-        const formProps = Object.fromEntries(formData);
-        
-        try {
-            // Burada form verilerini işleyebilir veya bir API'ye gönderebilirsiniz
-            console.log('Form verileri:', formProps);
-            
-            // Başarılı gönderim sonrası
-            alert('Mesajınız başarıyla gönderildi!');
-            contactForm.reset();
-            
-        } catch (error) {
-            console.error('Form gönderimi sırasında hata:', error);
-            alert('Mesajınız gönderilemedi. Lütfen tekrar deneyin.');
-        }
-    });
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+    };
+
+    // mailto: link oluştur
+    const mailtoLink = `mailto:mbugrakaraturk@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+        `From: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+
+    // Mail client'ı aç
+    window.location.href = mailtoLink;
+
+    // Formu temizle
+    document.getElementById('contactForm').reset();
 }); 
