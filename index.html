@@ -14,32 +14,69 @@
     <main>
         <section id="home" class="hero-section">
             <div class="hero-content">
-                <h1>Welcome</h1>
-                <p class="lead">I'm Mustafa Buğra Karatürk, Game Developer</p>
+                <div class="profile-image">
+                    <img src="assets/ProfileP.jpg" alt="Mustafa Buğra Karatürk">
+                </div>
+                <h1>Welcome to My Portfolio</h1>
+                <p class="lead">I'm Mustafa Buğra Karatürk</p>
+                <p class="subtitle">Game Developer & Computer Engineering Student</p>
+                <div class="social-links-hero">
+                    <a href="https://github.com/MBK66TR" title="GitHub" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bugrakaraturk/" title="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
                 <div class="cta-buttons">
-                    <a href="projects.html" class="btn btn-primary">View My Projects</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+                    <a href="projects.html" class="btn btn-primary">
+                        <i class="fas fa-gamepad"></i> View My Projects
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
                 </div>
             </div>
         </section>
 
         <section id="about" class="about-section">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>As a passionate game developer, I design creative and immersive gaming experiences. Using Unity/Unreal Engine, I aim to deliver memorable experiences to users through my projects.</p>
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>As a passionate game developer, I design creative and immersive gaming experiences. Using Unity/Unreal Engine, I aim to deliver memorable experiences to users through my projects.</p>
+                    </div>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i class="fas fa-cube"></i> Unreal Engine 5</span>
+                            <span class="skill-tag"><i class="fas fa-unity"></i> Unity</span>
+                            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-tag"><i class="fas fa-code"></i> C++</span>
+                            <span class="skill-tag"><i class="fas fa-code"></i> C#</span>
+                            <span class="skill-tag"><i class="fas fa-gamepad"></i> Game Design</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Unreal Engine 5</span>
-                        <span class="skill-tag">Unity</span>
-                        <span class="skill-tag">Pygame</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Blueprints</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Game Design</span>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="featured-projects-grid">
+                    <!-- Action RPG -->
+                    <div class="featured-project">
+                        <div class="project-preview">
+                            <video controls poster="assets/projects/actionrpg/cover.jpg">
+                                <source src="assets/projects/actionrpg/ActionRPG.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-info">
+                            <h3>Action RPG</h3>
+                            <p>A third-person action RPG featuring dynamic combat systems, character progression, and interactive environments. Built with Unreal Engine 5.</p>
+                            <a href="projects.html" class="btn btn-primary">View All Projects</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -47,7 +84,6 @@
     </main>
 
     <div id="footer-placeholder"></div>
-
     <script src="scripts/components.js"></script>
     <script src="scripts/main.js"></script>
 </body>
