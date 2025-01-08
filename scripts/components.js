@@ -1,4 +1,4 @@
-// Header ve Footer'ı yükleyen fonksiyonlar
+// Header and Footer loading functions
 async function loadHeader() {
     const headerElement = document.querySelector('#header-placeholder');
     try {
@@ -7,7 +7,7 @@ async function loadHeader() {
         headerElement.innerHTML = html;
         initializeHeaderScripts();
     } catch (error) {
-        console.error('Header yüklenirken hata:', error);
+        console.error('Error loading header:', error);
     }
 }
 
@@ -18,11 +18,11 @@ async function loadFooter() {
         const html = await response.text();
         footerElement.innerHTML = html;
     } catch (error) {
-        console.error('Footer yüklenirken hata:', error);
+        console.error('Error loading footer:', error);
     }
 }
 
-// Header ile ilgili script'leri başlatan fonksiyon
+// Initialize header scripts
 function initializeHeaderScripts() {
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
@@ -32,7 +32,7 @@ function initializeHeaderScripts() {
         navLinks.classList.toggle('active');
     });
 
-    // Aktif sayfayı vurgulama
+    // Highlight active page
     const currentPage = window.location.pathname;
     document.querySelectorAll('.nav-links a').forEach(link => {
         if (link.getAttribute('href') === currentPage.split('/').pop()) {
@@ -41,7 +41,7 @@ function initializeHeaderScripts() {
     });
 }
 
-// Sayfa yüklendiğinde bileşenleri yükle
+// Load components when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
